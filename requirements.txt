@@ -51,3 +51,4 @@ traitlets==5.3.0
 tzdata==2022.5
 urllib3==1.26.11
 wcwidth==0.2.5
+psycopg==3.1.4
