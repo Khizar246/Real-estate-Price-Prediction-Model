@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME</title>
+</head>
+<body>
+
+                    <form class="hero-subscribe-from"  action = "result"  method="GET">
+                        <input type="text" name="Location" placeholder="Enter your Location">
+                        <input type="number" name="sqft" placeholder="Enter your sqft">
+                        <input type="number" name="bath" placeholder="Enter your bath">
+                        <input type="number" name="bhk" placeholder="Enter your bhk">
+                        <strong><input class="contact-form" type="submit" value='Enter'></strong>
+                        <!-- <button class="site-btn sb-gradients">Or see What's Trending</button> -->
+                    <!-- </form> -->
+
+<!-- </body> -->
+<!-- </html> -->
+<!DOCTYPE HTML>
+{% load static %}
+{% comment %} {% load mathfilters %} {% endcomment %}
+<html lang="en">
+<head>
+    <title>LSA - Home</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cryptocurrency Landing Page Template">
+    <meta name="keywords" content="cryptocurrency, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="{% static 'mk/assets/home/img/favicon.ico' %}" rel="shortcut icon"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'mk/assets/home/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mk/assets/home/css/font-awesome.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mk/assets/home/css/themify-icons.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mk/assets/home/css/animate.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mk/assets/home/css/owl.carousel.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mk/assets/home/css/style.css' %}"/>
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div>
+ -->
+    <!-- Header section -->
+    <header class="header-section clearfix">
+            <div class="container-fluid">
+                    <!-- <a href="/" class="site-btn"><h4>Back to Pranay.ai</h4></a> -->
+<!--            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="">
+            </a>
+            <div class="responsive-bar"><i class="fa fa-bars"></i></div>
+            <a href="" class="user"><i class="fa fa-user"></i></a>
+
+            <nav class="main-menu">
+                <ul class="menu-list">
+                    <li><a href="">Solution</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+
+            </nav> -->
+        </div>
+    </header>
+    <!-- Header section end -->
+
+
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 hero-text">
+
+                    <h2>Real Estate <span>Price Prediction</span></h2>
+                                    {% csrf_token %}
+                    <form class="hero-subscribe-from"  action = "result"  method="GET">
+                        <input type="text" name="Location" placeholder="Enter Location">
+                        <input type="number" name="sqft" placeholder="Enter sqft">
+                        <input type="number" name="bath" placeholder="Enter bath">
+                        <input type="number" name="bhk" placeholder="Enter bhk">
+
+                        <strong><input class="contact-form" type="submit" value='Enter'></strong>
+                        <!-- <button class="site-btn sb-gradients">Or see What's Trending</button> -->
+                    </form>
+
+
+                    <!-- <button class="site-btn sb-gradients" onclick="window.location.href='trnd'">Or see What's Trending</button> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Hero section end -->
+
+    <!--====== Javascripts & Jquery ======-->
+    <script src="{% static 'mk/assets/home/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'mk/assets/home/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'mk/assets/home/js/main.js' %}"></script>
+</body>
+</html>
