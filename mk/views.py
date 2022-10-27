@@ -3,8 +3,13 @@ from .lr import predict_price
 
 # Create your views here.
 
+
+f = open("mk/columns.json","r")
+data = json.loads(f.read())
+
+
 def home(request):
-    return render(request, 'mk/home.html')
+    return render(request, 'mk/home.html',{'loc':data['data_columns']})
 
 def result(request):
     if request.method =='GET':

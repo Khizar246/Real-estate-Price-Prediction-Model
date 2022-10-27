@@ -89,7 +89,14 @@
                     <h2>Real Estate <span>Price Prediction</span></h2>
                                     {% csrf_token %}
                     <form class="hero-subscribe-from"  action = "result"  method="GET">
-                        <input type="text" name="Location" placeholder="Enter Location">
+                        {% comment %} <input type="text" name="Location" placeholder="Enter Location"> {% endcomment %}
+                        <select class="form-control" id="exampleFormControlSelect1" name="Location">
+                            <option value="">Enter Location</option>
+                            <!-- {% csrf_token %} -->
+                            {%for t in loc %}
+                                <option value= "{{t}}" >{{t}}</option>
+                            {%endfor%}
+                        </select>
                         <input type="number" name="sqft" placeholder="Enter sqft">
                         <input type="number" name="bath" placeholder="Enter bath">
                         <input type="number" name="bhk" placeholder="Enter bhk">
