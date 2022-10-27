@@ -18,4 +18,4 @@ def result(request):
         bhk = request.GET['bhk']
         location = request.GET['Location']
         print(f'answer is {predict_price(location,sqft,bath,bhk)}')
-    return render(request, 'mk/result.html', {'price': round(predict_price(location,sqft,bath,bhk),2)})
+    return render(request, 'mk/result.html', {'price': predict_price(location,sqft,bath,bhk)})

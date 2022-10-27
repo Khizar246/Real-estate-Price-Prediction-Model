@@ -12,11 +12,15 @@ data = json.loads(f.read())
 
 
 def predict_price(location,sqft,bath,bhk):
-    x1 = np.zeros(len(data['data_columns']))
-    loc_index = np.where(pd.Index(data['data_columns'])==location.lower())[0][0]
-    x1[0] = sqft
-    x1[1] = bath
-    x1[2] = bhk
-    if loc_index >= 0:
-        x1[loc_index] = 1
-    return lr_clf.predict([x1])[0]
+    try:
+        loc_index = np.where(pd.Index(data['data_columns'])==location.lower())[0][0]
+        x1 = np.zeros(len(data['data_columns']))
+        x1[0] = sqft
+        x1[1] = bath
+        x1[2] = bhk
+        if loc_index >= 0:
+            x1[loc_index] = 1           
+        return "Rs. "+str(round(lr_clf.predict([x1])[0],2))+" Lakhs"
+    except:
+        string = "Incorrect input (error:404)"
+        return string   
