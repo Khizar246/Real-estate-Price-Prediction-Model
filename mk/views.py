@@ -9,7 +9,7 @@ data = json.loads(f.read())
 
 
 def home(request):
-    return render(request, 'mk/home.html',{'loc':data['data_columns']})
+    return render(request, 'mk/home.html',{'loc':data['data_columns'][3:]})
 
 def result(request):
     if request.method =='GET':
