@@ -52,3 +52,4 @@ tzdata==2022.5
 urllib3==1.26.11
 wcwidth==0.2.5
 psycopg==3.1.4
+whitenoise==6.2.0
