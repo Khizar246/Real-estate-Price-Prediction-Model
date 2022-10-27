@@ -90,9 +90,8 @@
                                     {% csrf_token %}
                     <form class="hero-subscribe-from"  action = "result"  method="GET">
                         {% comment %} <input type="text" name="Location" placeholder="Enter Location"> {% endcomment %}
-                        <select class="form-control" id="exampleFormControlSelect1" name="Location">
+                        <select class="form-control col-lg-5 mb-3" name="Location">
                             <option value="">Enter Location</option>
-                            <!-- {% csrf_token %} -->
                             {%for t in loc %}
                                 <option value= "{{t}}" >{{t}}</option>
                             {%endfor%}

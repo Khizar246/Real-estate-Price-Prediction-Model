@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .lr import predict_price
-
+import json
 # Create your views here.
 
 
